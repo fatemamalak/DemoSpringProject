@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <ctx:annotation-config></ctx:annotation-config><!-- Indication that we can use annotations -->
+    <ctx:component-scan base-package="com.first"></ctx:component-scan><!-- scan all java files in the specified folder for handler mapping with mapping /fatema(name given in index file)-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/myjsp/"></property>
+    <!-- prefix means the folder name and suffix means the extension of the file  -->
+    <property name="suffix" value=".jsp"></property>
+    </bean>
+</beans>
